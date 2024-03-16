@@ -70,6 +70,7 @@ public interface IObserver
 public class RollerSetting:ScriptableObject
 {
     public float rollTime { get; set; }
+    public float showTime { get; set; }
     public int dice { get; set; }
 }
 
@@ -83,21 +84,59 @@ public interface IRoller
     public static List<GameObject> listener { get; set; }
 }
 
-[CreateAssetMenu(fileName = "Cell", menuName = "Cell Settings")]
-public class CellSetting : ScriptableObject
+public interface IDiceListener
+
 {
-    public Sprite 
+    public void Wait(IRoller roller);
+    public void Refresh();
 }
 
-public enum CellType
+[CreateAssetMenu(fileName = "Cell", menuName = "Cell Data")]
+public class CellData : ScriptableObject
 {
-    RESOURCE,EFFECT
+    public Sprite itemIcon;
 }
+
+[CreateAssetMenu(fileName = "Resource Cell", menuName = "Cell Data")]
+public class ResourceCellData : CellData
+{
+    public float value;
+    public int level;
+}
+
 
 public interface ICell
+{  
+    public Sprite itemIcon {  get; set; }
+    public void Trigger();
+}
+
+
+public interface IWindow
 {
-    public int level { get; set; }
-    public CellType type { get; set; }
-    public bool trigger { get; set; }
-    public bool Trigger();
+    public Button exit { get; set; }
+    public void Exit();
+}
+
+public static class Extension
+{
+    public static void WaitForSeconds(this MonoBehaviour mono, float seconds, Action action)
+    {
+        mono.StartCoroutine(IWaitForSeconds(seconds, action));
+    }
+    static IEnumerator IWaitForSeconds(float seconds, Action action)
+    {
+        yield return new WaitForSeconds(seconds);
+        action?.Invoke();
+    }
+}
+
+
+public enum Panel
+{
+
+}
+public struct PanelDB
+{
+  
 }
