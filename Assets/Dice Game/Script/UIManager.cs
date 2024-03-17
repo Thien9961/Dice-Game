@@ -45,6 +45,6 @@ public class UIManager : Singleton<UIManager>,IDiceListener
     }
     public void ReceiveResult(Dice dice, int result)
     {
-        Debug.Log(dice.name + " " + result);
+        Debug.Log(dice.name + " " + dice.sides[result].value);
     }
 }

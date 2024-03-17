@@ -3,27 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SideSelectionWindow : Singleton<SideSelectionWindow>
+public class SideSelectionWindow : MonoBehaviour
 {
     public Button X;
-    public Button[] side=new Button[RedRoller.instance.dice.sides.Length];
+    public RedDice[] dice=new RedDice[6];
     RedDice _dice;
-    protected override void Awake()
+    void Awake()
     {
-        base.Awake();
         X.onClick.AddListener(Exit);
-        X.interactable = false;
-        _dice = Instantiate(RedRoller.instance.dice, UIManager.instance.transform);
-        for (int i = 0; i<side.Length; i++)
+        foreach (RedDice d in dice)
         {
-            side[i].onClick.AddListener(() => { X.interactable = true;_dice.guarantee = i; });
+            d.GetComponent<Button>().onClick.AddListener(() => { X.interactable = true; Debug.Log(d.sides[0].value); _dice = d; });
         }
     }
 
     public void Exit()
     {
+        Instantiate(_dice, UIManager.instance.transform).Roll(); 
         DestroyImmediate(gameObject);
-        _dice.Roll();
     }
     // Start is called before the first frame update
     void Start()

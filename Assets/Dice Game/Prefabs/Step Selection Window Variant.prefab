@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 2881695371089081754}
   - component: {fileID: 4692888562179024381}
   - component: {fileID: 6528631213082951641}
+  - component: {fileID: 4079894193862125666}
   m_Layer: 5
   m_Name: 2
   m_TagString: Untagged
@@ -256,6 +257,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4079894193862125666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270105386769210242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689bdce232256dd46bda6b667f52a66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rollTime: 2
+  showTime: 2
+  sides:
+  - {fileID: 11400000, guid: 88aa9c90ba28e7f4bbbfce3fe2eec96f, type: 2}
 --- !u!1 &2358331270225277317
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +285,7 @@ GameObject:
   - component: {fileID: 5925519542286502522}
   - component: {fileID: 8541854325869872992}
   - component: {fileID: 2185451742817846754}
+  - component: {fileID: 8147342259234225713}
   m_Layer: 5
   m_Name: 6
   m_TagString: Untagged
@@ -377,6 +395,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8147342259234225713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2358331270225277317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689bdce232256dd46bda6b667f52a66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rollTime: 2
+  showTime: 2
+  sides:
+  - {fileID: 11400000, guid: f8cb6610a48a316489884abd0340cf4b, type: 2}
 --- !u!1 &2397924908255376922
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +423,7 @@ GameObject:
   - component: {fileID: 8718192090032089888}
   - component: {fileID: 7155207747945456114}
   - component: {fileID: 1524718043296082928}
+  - component: {fileID: 6977085475004092683}
   m_Layer: 5
   m_Name: 1
   m_TagString: Untagged
@@ -498,6 +533,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6977085475004092683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2397924908255376922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689bdce232256dd46bda6b667f52a66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rollTime: 2
+  showTime: 2
+  sides:
+  - {fileID: 11400000, guid: bfa4a1574b8301940ab9bf98f1261a96, type: 2}
 --- !u!1 &3945014352191024204
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +562,7 @@ GameObject:
   - component: {fileID: 9019463700635508173}
   - component: {fileID: 8589805226071229742}
   m_Layer: 5
-  m_Name: Button
+  m_Name: X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -615,7 +666,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 9019463700635508173}
   m_OnClick:
     m_PersistentCalls:
@@ -632,6 +683,7 @@ GameObject:
   - component: {fileID: 4618221991399689037}
   - component: {fileID: 1065009091214628366}
   - component: {fileID: 6424381042210795473}
+  - component: {fileID: 2941018850058635036}
   m_Layer: 5
   m_Name: 5
   m_TagString: Untagged
@@ -741,6 +793,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2941018850058635036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4064900599774208320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689bdce232256dd46bda6b667f52a66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rollTime: 2
+  showTime: 2
+  sides:
+  - {fileID: 11400000, guid: 5d84f6bf2df0d0b428731e7db5f3a0df, type: 2}
 --- !u!1 &8068080895892847095
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +823,7 @@ GameObject:
   - component: {fileID: 5396451331473199414}
   - component: {fileID: 28574956022939856}
   m_Layer: 5
-  m_Name: Dice sides
+  m_Name: Red Dices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,6 +951,7 @@ GameObject:
   - component: {fileID: 6857056356820775076}
   - component: {fileID: 495107288871005111}
   - component: {fileID: 7195610019579535973}
+  - component: {fileID: 4220446931963519639}
   m_Layer: 5
   m_Name: 4
   m_TagString: Untagged
@@ -992,6 +1061,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4220446931963519639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416471938859656730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689bdce232256dd46bda6b667f52a66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rollTime: 2
+  showTime: 2
+  sides:
+  - {fileID: 11400000, guid: 6b23379ccd2827a4cb807dea1dc8bafa, type: 2}
 --- !u!1 &8778838554367779798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,6 +1089,7 @@ GameObject:
   - component: {fileID: 5502099960129859149}
   - component: {fileID: 1081610697114016178}
   - component: {fileID: 6321693447741906590}
+  - component: {fileID: 5641165163459547480}
   m_Layer: 5
   m_Name: 3
   m_TagString: Untagged
@@ -1113,6 +1199,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5641165163459547480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8778838554367779798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689bdce232256dd46bda6b667f52a66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rollTime: 2
+  showTime: 2
+  sides:
+  - {fileID: 11400000, guid: a81f013ac0f14034ea7a0bc84c7583e6, type: 2}
 --- !u!1001 &5931679008264889533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1222,6 +1324,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04aac1570f443fd4698ea2564ba3dbaa, type: 3}
+--- !u!1 &1703055007867278625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5040646327443403164, guid: 04aac1570f443fd4698ea2564ba3dbaa, type: 3}
+  m_PrefabInstance: {fileID: 5931679008264889533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1189367116200831613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703055007867278625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2394f46ad760e0d4b8b7dfcfae592746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  X: {fileID: 8589805226071229742}
+  dice:
+  - {fileID: 6977085475004092683}
+  - {fileID: 4079894193862125666}
+  - {fileID: 5641165163459547480}
+  - {fileID: 4220446931963519639}
+  - {fileID: 2941018850058635036}
+  - {fileID: 8147342259234225713}
 --- !u!224 &1703055007867278626 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5040646327443403167, guid: 04aac1570f443fd4698ea2564ba3dbaa, type: 3}

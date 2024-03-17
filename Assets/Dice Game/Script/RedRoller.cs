@@ -7,8 +7,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class RedRoller : Singleton<RedRoller>, IRoller,IDiceListener
 {
-    public GameObject selectionWindow;
-    public RedDice dice;
+    public SideSelectionWindow selectionWindow;
     public int redDice { get { return int.Parse(diceQty.text); } set { diceQty.text = value.ToString(); } }
     public TextMeshProUGUI diceQty;
     public static List<IDiceListener> listener { get; set; }
@@ -17,10 +16,8 @@ public class RedRoller : Singleton<RedRoller>, IRoller,IDiceListener
         if (redDice > 0)
         {
             redDice--;
-            Instantiate(selectionWindow);
-            Debug.Log("red rolling");
+            Instantiate(selectionWindow.transform,UIManager.instance.transform);
         }
-        Debug.Log("red dice" + redDice);
     }
     public void WaitForResult(Dice dice)
     {
