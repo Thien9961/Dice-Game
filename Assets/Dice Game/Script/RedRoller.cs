@@ -10,7 +10,6 @@ public class RedRoller : Singleton<RedRoller>, IRoller,IDiceListener
     public SideSelectionWindow selectionWindow;
     public int redDice { get { return int.Parse(diceQty.text); } set { diceQty.text = value.ToString(); } }
     public TextMeshProUGUI diceQty;
-    public static List<IDiceListener> listener { get; set; }
     public void Roll()
     {
         if (redDice > 0)

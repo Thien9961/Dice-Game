@@ -17,9 +17,7 @@ public class WhiteRoller : Singleton<WhiteRoller>,IRoller,IDiceListener
         {
             whiteDice--;
             Instantiate(dice,UIManager.instance.transform).Roll();
-            Debug.Log("white rolling");
         }
-        Debug.Log("white dice"+whiteDice);
     }
     public void WaitForResult(Dice dice)
     {

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af150bfba9043d4d93b763d818588f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollTime: 3
+  rollTime: 2
   showTime: 2
   sides:
   - {fileID: 11400000, guid: bfa4a1574b8301940ab9bf98f1261a96, type: 2}

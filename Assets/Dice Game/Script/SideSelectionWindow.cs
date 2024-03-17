@@ -13,7 +13,7 @@ public class SideSelectionWindow : MonoBehaviour
         X.onClick.AddListener(Exit);
         foreach (RedDice d in dice)
         {
-            d.GetComponent<Button>().onClick.AddListener(() => { X.interactable = true; Debug.Log(d.sides[0].value); _dice = d; });
+            d.GetComponent<Button>().onClick.AddListener(() => { X.interactable = true; _dice = d; });
         }
     }
 

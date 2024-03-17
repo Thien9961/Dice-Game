@@ -51,6 +51,11 @@ public interface ICell
     public void Trigger();
 }
 
+public interface IResource
+{
+
+}
+
 public static class Extension
 {
     public static void WaitForSeconds(this MonoBehaviour mono, float seconds, Action action)

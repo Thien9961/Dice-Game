@@ -7,7 +7,7 @@ public class Dice : MonoBehaviour,IDice
 {
     public float rollTime, showTime;
     public Side[] sides;
-    public static List<IDiceListener> listener= new List<IDiceListener>();
+    public static List<IDiceListener> listener = new();
 
     // Start is called before the first frame update
     public virtual void Roll()
@@ -24,13 +24,18 @@ public class Dice : MonoBehaviour,IDice
 
     public virtual void PublishResult()
     {
-        listener.ForEach(x => x.ReceiveResult(this,Random.Range(0,sides.Length+1)));
+        var rng = Random.Range(0, sides.Length);
+        listener.ForEach(x => x.ReceiveResult(this,rng));
         DestroyImmediate(gameObject);
     }
     protected virtual void Awake()
     {
-        listener.Add(WhiteRoller.instance);
-        listener.Add(RedRoller.instance);
-        listener.Add(UIManager.instance);
+        
+        if (!listener.Contains(WhiteRoller.instance))
+            listener.Add(WhiteRoller.instance);
+        if(!listener.Contains(RedRoller.instance))
+            listener.Add(RedRoller.instance);
+        if(!listener.Contains(UIManager.instance))
+            listener.Add(UIManager.instance);
     }
 }
