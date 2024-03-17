@@ -3,32 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SideSelectionWindow : Singleton<SideSelectionWindow>,IWindow
+public class SideSelectionWindow : Singleton<SideSelectionWindow>
 {
     public Button X;
-    public GameObject dice;
-    public Button exit { get; set; }
+    public Button[] side=new Button[RedRoller.instance.dice.sides.Length];
+    RedDice _dice;
     protected override void Awake()
     {
         base.Awake();
         X.onClick.AddListener(Exit);
-        Button side;
-        for(int i = 0; i<dice.transform.childCount; i++)
+        X.interactable = false;
+        _dice = Instantiate(RedRoller.instance.dice, UIManager.instance.transform);
+        for (int i = 0; i<side.Length; i++)
         {
-            if (dice.transform.GetChild(i).TryGetComponent(out side) && i < 6)
-            {
-                side.onClick.AddListener(() => { RedRoller.instance.guarantee = i + 1; Debug.Log("Guarantee " + i); });
-            }
-            else if (i >= 6)
-                break;
-            
+            side[i].onClick.AddListener(() => { X.interactable = true;_dice.guarantee = i; });
         }
     }
 
     public void Exit()
     {
-        gameObject.SetActive(false);
-        RedRoller.instance.Roll();
+        DestroyImmediate(gameObject);
+        _dice.Roll();
     }
     // Start is called before the first frame update
     void Start()

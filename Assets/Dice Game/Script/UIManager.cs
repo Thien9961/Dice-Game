@@ -5,23 +5,18 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : Singleton<UIManager>
+public class UIManager : Singleton<UIManager>,IDiceListener
 {
     public int star;
     public int laps;
-    public bool skipAnimation;
+    public Toggle skipAnimation;
     public TextMeshProUGUI timer;
-    public GameObject popup,panels;
-    public int[,] panelMap=new int[8,4];
-    public List<GameObject> panelList = new List<GameObject>();
-    public static readonly int[,] PANEL_MAP =
-  {
-        { 1,2,3,4,5,6,7,8 },
-        {9,0,0,0,0,0,0,10 },
-        {11,0,0,0,0,0,0,12},
-        {13,14,15,16,17,18,19,20}
-    };
-
+    public GameObject popup;
+    public Transform panels;
+    public List<GameObject> cellList = new List<GameObject>();
+    public static readonly int[,] CELL_MAP ={{ 2,4,6,5,9,10,1,3 }, {9,0,0,0,0,0,0,7 },{6,0,0,0,0,0,0,5},{ 1,3,4,5,10,7,3,9}};
+    [HideInInspector]
+    public List<Vector3> path = new();
     public Action<float,int> Reward(float value, float level)
     {
         Debug.Log("Reward " + value * level);
@@ -30,12 +25,26 @@ public class UIManager : Singleton<UIManager>
     // Start is called before the first frame update
     void Start()
     {
+        for(int i=0;i<CELL_MAP.GetLength(0);i++)
+        {
+            for(int j=0;j<CELL_MAP.GetLength(1);j++)
+            {
+                Vector3 v=Instantiate(cellList[CELL_MAP[i, j]], panels).transform.position;
+                if(CELL_MAP[i, j]!=0)
+                    path.Add(v);
+            }
+        }
+    }
+    public void WaitForResult(Dice dice)
+    {
 
     }
-
-    // Update is called once per frame
-    void Update()
+    public void WaitForPublish(Dice dice)
     {
-        
+
+    }
+    public void ReceiveResult(Dice dice, int result)
+    {
+        Debug.Log(dice.name + " " + result);
     }
 }

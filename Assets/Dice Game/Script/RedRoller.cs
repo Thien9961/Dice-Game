@@ -8,9 +8,7 @@ using UnityEngine.UI;
 public class RedRoller : Singleton<RedRoller>, IRoller,IDiceListener
 {
     public GameObject selectionWindow;
-    public int guarantee;
-    public RollerSetting settings { get; set; }
-    public bool active { get; set; }
+    public RedDice dice;
     public int redDice { get { return int.Parse(diceQty.text); } set { diceQty.text = value.ToString(); } }
     public TextMeshProUGUI diceQty;
     public static List<IDiceListener> listener { get; set; }
@@ -19,43 +17,27 @@ public class RedRoller : Singleton<RedRoller>, IRoller,IDiceListener
         if (redDice > 0)
         {
             redDice--;
-            Invoke(nameof(GetResult), settings.rollTime);
+            Instantiate(selectionWindow);
+            Debug.Log("red rolling");
         }
+        Debug.Log("red dice" + redDice);
     }
-    public int GetResult()
+    public void WaitForResult(Dice dice)
     {
-        listener.ForEach(x => x.Wait(this));
-        return guarantee;
+        gameObject.SetActive(false);
     }
-    public void Refresh()
+    public void WaitForPublish(Dice dice)
+    {
+
+    }
+    public void ReceiveResult(Dice dice, int result)
     {
         gameObject.SetActive(true);
-        ResourceCell cell = new ResourceCell();
-    }
-
-    public void Wait(IRoller roller)
-    {
-        Invoke(nameof(Refresh), roller.settings.showTime);
-        
-        gameObject.SetActive(false);
     }
     protected override void Awake()
     {
         base.Awake();
-        redDice = settings.dice;
-        Instantiate(selectionWindow);
-        GetComponent<Button>().onClick.AddListener(() => { SideSelectionWindow.instance.gameObject.SetActive(true); });
+        GetComponent<Button>().onClick.AddListener(Roll);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

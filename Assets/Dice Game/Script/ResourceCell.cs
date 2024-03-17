@@ -6,7 +6,6 @@ using System;
 
 public class ResourceCell : MonoBehaviour,ICell
 {
-    public ResourceCellData data;
     public event Action<float,int> onTrigger;
     public Sprite itemIcon { get { return item.GetComponent<SpriteRenderer>().sprite; } set { item.GetComponent<SpriteRenderer>().sprite = value; } }
     public float value { get {
@@ -41,9 +40,6 @@ public class ResourceCell : MonoBehaviour,ICell
     // Start is called before the first frame update
     void Start()
     {
-        itemIcon = data.itemIcon;
-        value = data.value;
-        level = data.level;
         onTrigger += UIManager.instance.Reward(value,level);
     }
 

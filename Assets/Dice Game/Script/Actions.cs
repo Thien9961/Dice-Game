@@ -6,7 +6,7 @@ public class Actions : MonoBehaviour
 {
     public void Disable()
     {
-        gameObject.SetActive(false);
+        DestroyImmediate(gameObject);
     }
 
     public void Enable()

@@ -479,6 +479,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7303572202910981766, guid: ebf0121845730cb489660796dad1e81d, type: 3}
   m_PrefabInstance: {fileID: 7303572201996445958}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1185980825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7303572201230395404, guid: ebf0121845730cb489660796dad1e81d, type: 3}
+  m_PrefabInstance: {fileID: 7303572201996445958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1296959140
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1296959141
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1306,6 +1317,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4122801701331830510, guid: ebf0121845730cb489660796dad1e81d, type: 3}
+      propertyPath: skipAnimation
+      value: 
+      objectReference: {fileID: 1185980825}
     - target: {fileID: 4193411949895495396, guid: ebf0121845730cb489660796dad1e81d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1832,6 +1847,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7280378917541824475, guid: ebf0121845730cb489660796dad1e81d, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7303572201249390568, guid: ebf0121845730cb489660796dad1e81d, type: 3}
+      propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7303572201463972235, guid: ebf0121845730cb489660796dad1e81d, type: 3}
@@ -2307,20 +2326,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   star: 0
   laps: 0
-  skipAnimation: 0
+  skipAnimation: {fileID: 0}
   timer: {fileID: 0}
   popup: {fileID: 0}
   panels: {fileID: 0}
-  panelList: []
---- !u!114 &7303572201996445961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7303572201996445959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c360c63e1d65a6d4680ec78409aba0d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  cellList: []
+  path: []

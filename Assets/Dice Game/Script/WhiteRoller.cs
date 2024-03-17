@@ -8,40 +8,34 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class WhiteRoller : Singleton<WhiteRoller>,IRoller,IDiceListener
 {
-    public RollerSetting settings { get; set; }
-    public bool active { get; set; }
+    public Dice dice;
     public int whiteDice { get { return int.Parse(diceQty.text); } set { diceQty.text = value.ToString(); } }
     public TextMeshProUGUI diceQty;
-    public static List<IDiceListener> listener { get; set; }
     public void Roll()
     {
         if (whiteDice > 0)
         {
             whiteDice--;
-            Invoke(nameof(GetResult), settings.rollTime);
+            Instantiate(dice,UIManager.instance.transform).Roll();
+            Debug.Log("white rolling");
         }
-
+        Debug.Log("white dice"+whiteDice);
     }
-    public int GetResult()
+    public void WaitForResult(Dice dice)
     {
-        listener.ForEach(x => x.Wait(this));
-        return Random.Range(1, 7);
+        gameObject.SetActive(false);
     }
+    public void WaitForPublish(Dice dice)
+    {
 
-    public void Refresh()
+    }
+    public void ReceiveResult(Dice dice, int result)
     {
         gameObject.SetActive(true);
-    }
-
-    public void Wait(IRoller roller)
-    {
-        Invoke(nameof(Refresh), roller.settings.showTime);
-        gameObject.SetActive(false);
     }
     protected override void Awake()
     {
         base.Awake();
-        whiteDice = settings.dice;
         GetComponent<Button>().onClick.AddListener(Roll);
     }
     // Start is called before the first frame update

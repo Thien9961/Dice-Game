@@ -365,6 +365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource Panel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8585663700871866070, guid: cc27a8b306355874f95a93838fc2f78c, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc27a8b306355874f95a93838fc2f78c, type: 3}
 --- !u!224 &2775348921589563088 stripped

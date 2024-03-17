@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 192564669041187816, guid: ea505152fc0d1664ba0850313b120f3f, type: 3}
       propertyPath: m_text
-      value: 150K
+      value: 150000
       objectReference: {fileID: 0}
     - target: {fileID: 959716819231474672, guid: ea505152fc0d1664ba0850313b120f3f, type: 3}
       propertyPath: m_text
@@ -101,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2775348921589563089, guid: ea505152fc0d1664ba0850313b120f3f, type: 3}
       propertyPath: m_Name
-      value: Green Tomoe
+      value: Green Tomoe Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2775348922434174272, guid: ea505152fc0d1664ba0850313b120f3f, type: 3}
       propertyPath: m_Sprite
@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd8616e71493ed49912c273a6324836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
   levelTxt: {fileID: 5077091556836827888}
   valueTxt: {fileID: 5298707099329231592}
   item: {fileID: 0}
