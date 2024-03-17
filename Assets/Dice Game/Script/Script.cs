@@ -45,15 +45,15 @@ public interface IDiceListener
 }
 
 
-public interface ICell
+public interface ICell:ICharacterListener
 {  
     public Sprite itemIcon {  get; set; }
     public void Trigger();
 }
 
-public interface IResource
+public interface IContainer
 {
-
+    public void Add(ResourceCell source,float amount);
 }
 
 public static class Extension
@@ -69,12 +69,13 @@ public static class Extension
     }
 }
 
-
-public enum Panel
+public interface IEffect
 {
-
+    public void Apply();
 }
-public struct PanelDB
+
+public interface ICharacterListener
 {
-  
+    //public void OnCharacterMove();
+    public void OnCharacterStopped();
 }

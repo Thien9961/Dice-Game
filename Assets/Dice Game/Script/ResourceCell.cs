@@ -6,7 +6,9 @@ using System;
 
 public class ResourceCell : MonoBehaviour,ICell
 {
-    public event Action<float,int> onTrigger;
+    public delegate void AddResource(ResourceCell cell,float value);
+    public event AddResource onTrigger;
+    public List<IContainer> storage=new();
     public Sprite itemIcon { get { return item.GetComponent<SpriteRenderer>().sprite; } set { item.GetComponent<SpriteRenderer>().sprite = value; } }
     public float value { get {
             string value=string.Empty;
@@ -30,22 +32,20 @@ public class ResourceCell : MonoBehaviour,ICell
     public TextMeshProUGUI levelTxt,valueTxt;
     public Transform item;
 
+    public void OnCharacterStopped()
+    {
+        Trigger();
+    }
     public void Trigger()
     {
-        onTrigger.Invoke(value,level);
+        onTrigger.Invoke(this,value * level);
     }
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    protected virtual void Awake()
     {
-        onTrigger += UIManager.instance.Reward(value,level);
+        storage.Add(UIManager.instance);
+        foreach (IContainer container in storage)
+            onTrigger += container.Add;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

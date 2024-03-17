@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
-public class WhiteRoller : Singleton<WhiteRoller>,IRoller,IDiceListener
+public class WhiteRoller : Singleton<WhiteRoller>,IRoller,IDiceListener,IContainer
 {
     public Dice dice;
     public int whiteDice { get { return int.Parse(diceQty.text); } set { diceQty.text = value.ToString(); } }
@@ -30,6 +30,11 @@ public class WhiteRoller : Singleton<WhiteRoller>,IRoller,IDiceListener
     public void ReceiveResult(Dice dice, int result)
     {
         gameObject.SetActive(true);
+    }
+
+    public void Add(ResourceCell cell, float amount)
+    {
+        whiteDice += Mathf.RoundToInt(amount);
     }
     protected override void Awake()
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
-public class RedRoller : Singleton<RedRoller>, IRoller,IDiceListener
+public class RedRoller : Singleton<RedRoller>, IRoller,IDiceListener,IContainer
 {
     public SideSelectionWindow selectionWindow;
     public int redDice { get { return int.Parse(diceQty.text); } set { diceQty.text = value.ToString(); } }
@@ -25,6 +25,11 @@ public class RedRoller : Singleton<RedRoller>, IRoller,IDiceListener
     public void WaitForPublish(Dice dice)
     {
 
+    }
+
+    public void Add(ResourceCell cell, float amount)
+    {
+        redDice += Mathf.RoundToInt(amount);
     }
     public void ReceiveResult(Dice dice, int result)
     {

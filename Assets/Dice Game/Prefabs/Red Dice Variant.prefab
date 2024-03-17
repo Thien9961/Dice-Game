@@ -97,7 +97,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841288501114066319, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
       propertyPath: m_Name
-      value: Red Dice
+      value: Red Dice Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4471500897173033449, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+    - {fileID: 7050530112962751447, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+    - {fileID: 7814050470544019728, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+    - {fileID: 8047814721795754623, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+--- !u!114 &2708975893263476501 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2632034419595703096, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+  m_PrefabInstance: {fileID: 80759562173060141}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3055005082445676301 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3133208515567774496, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+  m_PrefabInstance: {fileID: 80759562173060141}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6912965787918844322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6841288501114066319, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+  m_PrefabInstance: {fileID: 80759562173060141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &917446752230946934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6912965787918844322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962e992de3ed96c418f1d8e69cabd237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelTxt: {fileID: 3055005082445676301}
+  valueTxt: {fileID: 2708975893263476501}
+  item: {fileID: 0}

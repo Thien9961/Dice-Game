@@ -37,5 +37,7 @@ public class Dice : MonoBehaviour,IDice
             listener.Add(RedRoller.instance);
         if(!listener.Contains(UIManager.instance))
             listener.Add(UIManager.instance);
+        if(!listener.Contains(Character.instance))
+            listener.Add(Character.instance);
     }
 }
