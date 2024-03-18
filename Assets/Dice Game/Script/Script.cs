@@ -145,6 +145,7 @@ public class Double : ICharacterStatus
         if (doubled == false)
         {
             step *= 2;
+            character.path=new Vector3[step];
             doubled = true;
         }            
         if (character.location + 1 < UIManager.instance.playableArea.Length)

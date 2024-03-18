@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 787865143033617466, guid: ab1a3c24725a8ca46893bfeac1f7d69e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8381a7a711e5f4946ae57be17b1e6581, type: 3}
     - target: {fileID: 5070266007350379992, guid: ab1a3c24725a8ca46893bfeac1f7d69e, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -33,7 +37,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5479195591983333283, guid: ab1a3c24725a8ca46893bfeac1f7d69e, type: 3}
       propertyPath: m_Name
-      value: Dizzy Card
+      value: Dizzy Card Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989572564818325360, guid: ab1a3c24725a8ca46893bfeac1f7d69e, type: 3}
+      propertyPath: m_text
+      value: "\u0110i ng\u01B0\u1EE3c \u1EDF l\u1EA7n \u0111\u1ED5 x\xFAc x\u1EAFc
+        sau"
       objectReference: {fileID: 0}
     - target: {fileID: 7431574277699464287, guid: ab1a3c24725a8ca46893bfeac1f7d69e, type: 3}
       propertyPath: m_AnchorMax.y
