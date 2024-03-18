@@ -13,10 +13,10 @@ public class UIManager : Singleton<UIManager>,IDiceListener,IContainer
     public Toggle skipAnimation;
     public TextMeshProUGUI timer;
     public GameObject popup;
-    public Transform panels;
-    public List<GameObject> cellList = new List<GameObject>();
-    public static readonly int[,] CELL_MAP ={{ 2,4,6,5,9,10,1,3 }, {9,0,0,0,0,0,0,7 },{6,0,0,0,0,0,0,5},{ 1,3,4,5,10,7,3,9}};
-    List<ICell> path = new();
+    public Transform panels,path;
+    public Transform[] playableArea;
+    //public List<GameObject> cellList = new List<GameObject>();
+    //public static readonly int[,] CELL_MAP ={{ 2,4,6,5,9,10,1,3 }, {9,0,0,0,0,0,0,7 },{6,0,0,0,0,0,0,5},{ 1,3,4,5,10,7,3,9}};
     public void Add(ResourceCell cell, float value)
     {
         var v=Instantiate(popup, transform);
@@ -28,13 +28,14 @@ public class UIManager : Singleton<UIManager>,IDiceListener,IContainer
     // Start is called before the first frame update
     void Start()
     {
-        for(int i=0;i<CELL_MAP.GetLength(0);i++)
-        {
-            for(int j=0;j<CELL_MAP.GetLength(1);j++)
-            {
-                var v=Instantiate(cellList[CELL_MAP[i,j]], panels).GetComponent<ICell>();
-            }
-        }
+        //for(int i=0;i<CELL_MAP.GetLength(0);i++)
+        //{
+        //    for(int j=0;j<CELL_MAP.GetLength(1);j++)
+        //    {
+        //        var v=Instantiate(cellList[CELL_MAP[i,j]], panels).GetComponent<ICell>();
+        //    }
+        //}
+        Instantiate(Resources.Load<Character>("Tsunade"), transform).GetComponent<Character>().walkablePath=path;
     }
     public void WaitForResult(Dice dice)
     {
@@ -46,7 +47,7 @@ public class UIManager : Singleton<UIManager>,IDiceListener,IContainer
     }
     public void ReceiveResult(Dice dice, int result)
     {
-        Debug.Log(dice.name + " " + dice.sides[result].value);
+        Debug.Log(dice.name + " result: " + dice.sides[result].value);
     }
 
 }

@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.FilePathAttribute;
 
 public class Singleton<T> : MonoBehaviour where T : Component
 {
@@ -69,13 +71,79 @@ public static class Extension
     }
 }
 
-public interface IEffect
-{
-    public void Apply();
-}
-
 public interface ICharacterListener
 {
     //public void OnCharacterMove();
     public void OnCharacterStopped();
+
+}
+
+public interface ICharacterStatus
+{
+    Character character { get; set; }
+    static int step = 0;
+    public void Apply(ref int step,ref int i);
+}
+
+public class Normal : ICharacterStatus
+{
+    public Character character { get; set; }
+    
+
+    public Normal(Character character)
+    {
+        this.character = character;
+    }
+    public void Apply(ref int step,ref int i)
+    {
+        if (character.location + 1 < UIManager.instance.playableArea.Length)
+            character.location++;
+        else
+            character.location = 0;
+        character.path[i] = character.walkablePath.GetChild(character.location).position + character.offset;
+        step--;i++;
+    }
+}
+
+public class Dizzy : ICharacterStatus
+{
+    public Character character { get; set; }
+
+    public Dizzy(Character character)
+    {
+        this.character = character;
+    }
+    public void Apply(ref int step,ref int i) 
+    {
+        if (character.location - 1 > 0)
+            character.location--;
+        else
+            character.location = UIManager.instance.playableArea.Length-1;
+        character.path[i] = character.walkablePath.GetChild(character.location).position + character.offset;
+        step--;i++;
+    }
+}
+
+public class Double : ICharacterStatus
+{
+    public Character character { get; set; }
+    public bool doubled = false;
+    public Double(Character character)
+    {
+        this.character = character;
+    }
+    public void Apply(ref int step,ref int i) 
+    {
+        if (doubled == false)
+        {
+            step *= 2;
+            doubled = true;
+        }            
+        if (character.location + 1 < UIManager.instance.playableArea.Length)
+            character.location++;
+        else
+            character.location = 0;
+        character.path[i] = character.walkablePath.GetChild(character.location).position + character.offset;
+        step--;i++;
+    }
 }

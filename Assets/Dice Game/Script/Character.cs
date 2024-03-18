@@ -7,35 +7,36 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Animator))]
 public class Character : Singleton<Character>,IDiceListener
 {
-    float travelTime;
+    public float travelTime=0.5f;
     Animator animator;
-    public int startLocation;
+    public int location,direction;
     public Vector3 offset;
-    public float speed=0.1f;
-    public int currentLoc {  get;  set; }
+    public ICharacterStatus status;
+    public Transform walkablePath { get;set; }
+    public Vector3[] path { get;set; }
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
-        int n = 0;
-        foreach (int i in UIManager.CELL_MAP)
-            if (i != 0)
-                n++;
-        Debug.Log(n);
-        travelTime = 1 / (n*speed);
+        //animator = GetComponent<Animator>();
+        transform.position = walkablePath.GetChild(location).position+offset;
+        status = new Normal(this);
     }
+
 
     public void Move(int step,bool invert)
     {
-        Invoke(nameof(Stop), travelTime * step);
-        animator.SetFloat("multipler",speed);
-        Debug.Log(animator.speed);
+        float f = step * travelTime;int i = 0;
+        path=new Vector3[step];
+        while (step != 0)
+        {
+            status.Apply(ref step,ref i);
+        }
+        transform.DOPath(path,f);
+        Invoke(nameof(Stop), f);
     }
 
     public void Stop()
     {
-        animator.SetFloat("multipler", 0);
-        Debug.Log("Done");
     }
     public void WaitForResult(Dice dice)
     {

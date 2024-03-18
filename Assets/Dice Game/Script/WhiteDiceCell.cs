@@ -5,10 +5,10 @@ using UnityEngine;
 public class WhiteDiceCell : ResourceCell
 {
     // Start is called before the first frame update
-    protected override void Awake()
+    protected override void Start()
     {
         storage.Add( WhiteRoller.instance);
-        base.Awake();
+        base.Start();
     }
 
 }

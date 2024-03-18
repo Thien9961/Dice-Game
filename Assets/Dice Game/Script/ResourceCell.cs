@@ -41,11 +41,10 @@ public class ResourceCell : MonoBehaviour,ICell
         onTrigger.Invoke(this,value * level);
     }
 
-    protected virtual void Awake()
+    protected virtual void Start()
     {
         storage.Add(UIManager.instance);
         foreach (IContainer container in storage)
             onTrigger += container.Add;
     }
-
 }
