@@ -99,7 +99,11 @@ public class Normal : ICharacterStatus
         if (character.location + 1 < UIManager.instance.playableArea.Length)
             character.location++;
         else
+        {
             character.location = 0;
+            UIManager.instance.laps++;
+        }
+            
         character.path[i] = character.walkablePath.GetChild(character.location).position + character.offset;
         step--;i++;
     }
@@ -117,8 +121,11 @@ public class Dizzy : ICharacterStatus
     {
         if (character.location - 1 > 0)
             character.location--;
-        else
+        else 
+        { 
             character.location = UIManager.instance.playableArea.Length-1;
+            UIManager.instance.laps--;
+        }
         character.path[i] = character.walkablePath.GetChild(character.location).position + character.offset;
         step--;i++;
     }
@@ -127,10 +134,11 @@ public class Dizzy : ICharacterStatus
 public class Double : ICharacterStatus
 {
     public Character character { get; set; }
-    public bool doubled = false;
+    public bool doubled;
     public Double(Character character)
     {
         this.character = character;
+        doubled = false;
     }
     public void Apply(ref int step,ref int i) 
     {

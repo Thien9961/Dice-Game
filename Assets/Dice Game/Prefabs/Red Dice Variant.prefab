@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3830795278290759269, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3830795278290759269, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6841288501010765342, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -98,6 +106,14 @@ PrefabInstance:
     - target: {fileID: 6841288501114066319, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
       propertyPath: m_Name
       value: Red Dice Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771525632400939094, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771525632400939094, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4471500897173033449, guid: a8982e092384fe14e91bad3e051149b0, type: 3}

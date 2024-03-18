@@ -10,4 +10,10 @@ public class RedDiceCell : ResourceCell
         storage.Add(RedRoller.instance);
         base.Start();
     }
+
+    public override void Trigger()
+    {
+        base.Trigger();
+        level = 1;
+    }
 }

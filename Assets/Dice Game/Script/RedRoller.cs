@@ -30,6 +30,7 @@ public class RedRoller : Singleton<RedRoller>, IRoller,IDiceListener,IContainer
     public void Add(ResourceCell cell, float amount)
     {
         redDice += Mathf.RoundToInt(amount);
+        Debug.Log($"Gained {amount} red dice");
     }
     public void ReceiveResult(Dice dice, int result)
     {

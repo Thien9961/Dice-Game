@@ -11,4 +11,10 @@ public class WhiteDiceCell : ResourceCell
         base.Start();
     }
 
+    public override void Trigger()
+    {
+        base.Trigger();
+        level = 1;
+    }
+
 }

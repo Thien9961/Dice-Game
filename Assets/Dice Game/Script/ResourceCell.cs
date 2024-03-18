@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class ResourceCell : MonoBehaviour,ICell
@@ -9,7 +10,7 @@ public class ResourceCell : MonoBehaviour,ICell
     public delegate void AddResource(ResourceCell cell,float value);
     public event AddResource onTrigger;
     public List<IContainer> storage=new();
-    public Sprite itemIcon { get { return item.GetComponent<SpriteRenderer>().sprite; } set { item.GetComponent<SpriteRenderer>().sprite = value; } }
+    public Sprite itemIcon { get { return item.GetComponent<Image>().sprite; } set { item.GetComponent<Image>().sprite = value; } }
     public float value { get {
             string value=string.Empty;
             foreach (char character in valueTxt.text)
@@ -36,9 +37,11 @@ public class ResourceCell : MonoBehaviour,ICell
     {
         Trigger();
     }
-    public void Trigger()
+    public virtual void Trigger()
     {
-        onTrigger.Invoke(this,value * level);
+        onTrigger.Invoke(this, value * level);
+        if(level<3)
+            level++;
     }
 
     protected virtual void Start()

@@ -9,21 +9,27 @@ using UnityEngine.UI;
 public class UIManager : Singleton<UIManager>,IDiceListener,IContainer
 {
     public int star;
-    public int laps;
+    public int laps { get { return _laps; } set { _laps = value; lapTxt.text = $"Vòng {_laps}/3"; } }
     public Toggle skipAnimation;
-    public TextMeshProUGUI timer;
+    public TextMeshProUGUI timer,lapTxt;
     public GameObject popup;
     public Transform panels,path;
     public Transform[] playableArea;
+    int _laps;
     //public List<GameObject> cellList = new List<GameObject>();
     //public static readonly int[,] CELL_MAP ={{ 2,4,6,5,9,10,1,3 }, {9,0,0,0,0,0,0,7 },{6,0,0,0,0,0,0,5},{ 1,3,4,5,10,7,3,9}};
     public void Add(ResourceCell cell, float value)
     {
-        var v=Instantiate(popup, transform);
-        var c = v.GetComponentInChildren(typeof(Image), false) as Image;
+        var v=Instantiate(popup, transform);Image c;
         var t = v.GetComponentInChildren(typeof(TextMeshProUGUI), false) as TextMeshProUGUI;
-        c.sprite = cell.itemIcon;
-        t.text = cell.value.ToString();
+        foreach (Transform child in v.transform)
+            if (child != t)
+            {
+                c = child.GetComponent<Image>();
+                c.sprite = cell.itemIcon;
+                break;
+            }      
+        t.text = value.ToString();
     }
     // Start is called before the first frame update
     void Start()

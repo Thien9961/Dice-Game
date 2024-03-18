@@ -6,7 +6,7 @@ public class Actions : MonoBehaviour
 {
     public void Disable()
     {
-        DestroyImmediate(gameObject);
+        Destroy(gameObject);
     }
 
     public void Enable()

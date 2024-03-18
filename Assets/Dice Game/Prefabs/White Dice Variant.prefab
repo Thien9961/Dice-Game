@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2637617591637530374, guid: c7fa8faa8ca03cd4bbfa867c2421d786, type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2637617591637530374, guid: c7fa8faa8ca03cd4bbfa867c2421d786, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3440465772235008138, guid: c7fa8faa8ca03cd4bbfa867c2421d786, type: 3}
       propertyPath: storage
       value: 
@@ -102,6 +110,14 @@ PrefabInstance:
     - target: {fileID: 5711171940454870253, guid: c7fa8faa8ca03cd4bbfa867c2421d786, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496720061032177973, guid: c7fa8faa8ca03cd4bbfa867c2421d786, type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496720061032177973, guid: c7fa8faa8ca03cd4bbfa867c2421d786, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7740013439339973077, guid: c7fa8faa8ca03cd4bbfa867c2421d786, type: 3}
       propertyPath: m_text

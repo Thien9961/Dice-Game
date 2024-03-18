@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2058422131587721234, guid: d1102c4804cddeb4699b53e9da6c3d63, type: 3}
       propertyPath: m_Name
-      value: Coin
+      value: Coin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2058422131587721235, guid: d1102c4804cddeb4699b53e9da6c3d63, type: 3}
       propertyPath: m_Pivot.x
@@ -99,5 +99,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 34f47af902ff44c33abb7f08112403ad, type: 3}
+    - target: {fileID: 5747817095401165254, guid: d1102c4804cddeb4699b53e9da6c3d63, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 3847053737540379499}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1102c4804cddeb4699b53e9da6c3d63, type: 3}
+--- !u!224 &3847053737540379499 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2058422132164979586, guid: d1102c4804cddeb4699b53e9da6c3d63, type: 3}
+  m_PrefabInstance: {fileID: 3022908174883621097}
+  m_PrefabAsset: {fileID: 0}
