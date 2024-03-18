@@ -1,18 +1,16 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TarotCell : MonoBehaviour
+
+public class TarotCell : Cell
 {
-    // Start is called before the first frame update
-    void Start()
+    public TarotSelectionWindow window;
+    public override void Trigger()
     {
-        
+        Instantiate(window,UIManager.instance.transform);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

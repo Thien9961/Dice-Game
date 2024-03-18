@@ -9,6 +9,10 @@ public class RedDiceCell : ResourceCell
     {
         storage.Add(RedRoller.instance);
         base.Start();
+        valueTxt.color = Color.clear;
+        levelTxt.color = Color.clear;
+
+
     }
 
     public override void Trigger()

@@ -5,12 +5,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class ResourceCell : MonoBehaviour,ICell
+public class ResourceCell : Cell
 {
     public delegate void AddResource(ResourceCell cell,float value);
     public event AddResource onTrigger;
     public List<IContainer> storage=new();
-    public Sprite itemIcon { get { return item.GetComponent<Image>().sprite; } set { item.GetComponent<Image>().sprite = value; } }
     public float value { get {
             string value=string.Empty;
             foreach (char character in valueTxt.text)
@@ -31,13 +30,12 @@ public class ResourceCell : MonoBehaviour,ICell
     }
     public int level { get { int indexOfNumber = levelTxt.text.LastIndexOf('.'); return int.Parse(levelTxt.text.Substring(indexOfNumber + 1)); }  set { levelTxt.text = "Lv."+value.ToString(); } }
     public TextMeshProUGUI levelTxt,valueTxt;
-    public Transform item;
 
     public void OnCharacterStopped()
     {
         Trigger();
     }
-    public virtual void Trigger()
+    public override void Trigger()
     {
         onTrigger.Invoke(this, value * level);
         if(level<3)

@@ -37,7 +37,8 @@ public class Character : Singleton<Character>,IDiceListener
 
     public void Stop()
     {
-        if(UIManager.instance.playableArea[location].TryGetComponent(out ICell cell))
+        status = new Normal(this);
+        if (UIManager.instance.playableArea[location].TryGetComponent(out ICell cell))
             cell.Trigger();
     }
     public void WaitForResult(Dice dice)

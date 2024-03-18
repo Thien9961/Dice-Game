@@ -9,6 +9,8 @@ public class WhiteDiceCell : ResourceCell
     {
         storage.Add( WhiteRoller.instance);
         base.Start();
+        valueTxt.color = Color.clear;
+        levelTxt.color = Color.clear;
     }
 
     public override void Trigger()

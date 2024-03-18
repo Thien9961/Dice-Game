@@ -47,7 +47,7 @@ public interface IDiceListener
 }
 
 
-public interface ICell:ICharacterListener
+public interface ICell
 {  
     public Sprite itemIcon {  get; set; }
     public void Trigger();

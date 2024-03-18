@@ -365,7 +365,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource Panel Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 936800036587521740, guid: cc27a8b306355874f95a93838fc2f78c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc27a8b306355874f95a93838fc2f78c, type: 3}
 --- !u!224 &2775348921589563088 stripped
 RectTransform:
@@ -389,9 +390,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd8616e71493ed49912c273a6324836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 2775348922434174273}
   levelTxt: {fileID: 130497256414016264}
   valueTxt: {fileID: 5574504731705214267}
-  item: {fileID: 2775348922434174273}
 --- !u!224 &2775348922434174273 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8585663700871866071, guid: cc27a8b306355874f95a93838fc2f78c, type: 3}
