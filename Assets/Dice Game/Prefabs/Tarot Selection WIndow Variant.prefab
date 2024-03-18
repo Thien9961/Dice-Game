@@ -191,6 +191,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deck:
   - {fileID: 3581630686946985340, guid: 4b2cb68e4fc46ce4cbd8e32007016344, type: 3}
+  - {fileID: 6733240194219473635, guid: ba41d6101baf7a140ab8866bc8a0a831, type: 3}
+  - {fileID: 6931668711587959220, guid: 54522a48740c3444983e7cd1dac75359, type: 3}
+  - {fileID: 8180385347942315478, guid: 117261afc0c9126479fff9bd0e97a1da, type: 3}
+  - {fileID: 3581630686946985340, guid: 4b2cb68e4fc46ce4cbd8e32007016344, type: 3}
+  - {fileID: 5628149249503029206, guid: eb01fcb581010874c9cd174d51e7c7c9, type: 3}
   displayer: {fileID: 3844207501020657103}
   maxCard: 3
 --- !u!224 &7605924172963738950 stripped
