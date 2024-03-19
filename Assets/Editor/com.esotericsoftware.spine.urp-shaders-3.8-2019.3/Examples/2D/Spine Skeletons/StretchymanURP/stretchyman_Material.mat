@@ -8,14 +8,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: stretchyman_Material
-  m_Shader: {fileID: 4800000, guid: 9f253724b2d29a3438eeea48277c25cb, type: 3}
+  m_Shader: {fileID: 4800000, guid: a79d0a36ad5ba0542946e3c3317e2aa4, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHABLEND_ON
   - _EMISSION
   - _FIXED_NORMALS_VIEWSPACE
   - _NORMALMAP
-  - _RECEIVE_SHADOWS_OFF
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _USE8NEIGHBOURHOOD_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -25,6 +27,7 @@ Material:
     IGNOREPROJECTOR: true
     RenderType: Transparent
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -37,23 +40,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 54afe9be49fd5db49a11b9741d32edec, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DiffuseRamp:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0d1cf8a59ac52394084f22b49e53548e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: f1892711e91b98c4cbb121c5c2081896, type: 3}
+        m_Texture: {fileID: 2800000, guid: 271553eea6793644fa41df10397ac014, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 995515faab2e0b74baf5e886adc82c65, type: 3}
+        m_Texture: {fileID: 2800000, guid: c9255abfa116ced46ad8d46908663d9f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 2800000, guid: b61a8e1e7baba4d47b417e8b7cc852e0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -64,14 +63,15 @@ Material:
     - _BumpScale: 1
     - _Cull: 0
     - _CustomRenderQueue: 0
-    - _Cutoff: 0
+    - _Cutoff: 0.1
     - _DstBlend: 10
-    - _EmissionPower: 2
+    - _EmissionPower: 0.43
     - _EnableExternalAlpha: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
     - _Hue: 0
-    - _Metallic: 0
+    - _OutlineMipLevel: 0
+    - _OutlineReferenceTexWidth: 1024
+    - _OutlineSmoothness: 1
+    - _OutlineWidth: 3
     - _RenderQueue: 0
     - _RimPower: 2
     - _Saturation: 1
@@ -80,11 +80,14 @@ Material:
     - _StencilComp: 8
     - _StencilRef: 1
     - _StraightAlphaInput: 0
+    - _ThresholdEnd: 0.25
+    - _Use8Neighbourhood: 1
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 1, g: 0, b: 0, a: 0}
     - _FixedNormal: {r: 0, g: 0, b: 1, a: 1}
-    - _OverlayColor: {r: 0.18118013, g: 1, b: 0.033018887, a: 0}
+    - _OutlineColor: {r: 1, g: 1, b: 0, a: 1}
+    - _OverlayColor: {r: 0, g: 0, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

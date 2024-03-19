@@ -68,6 +68,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5040646326289418483, guid: 04aac1570f443fd4698ea2564ba3dbaa, type: 3}
@@ -171,6 +172,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5040646327443403167, guid: 04aac1570f443fd4698ea2564ba3dbaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3844207501020657103}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5040646327443403164, guid: 04aac1570f443fd4698ea2564ba3dbaa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6321277895207634743}
   m_SourcePrefab: {fileID: 100100000, guid: 04aac1570f443fd4698ea2564ba3dbaa, type: 3}
 --- !u!1 &7605924172963738949 stripped
 GameObject:
@@ -190,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-  - {fileID: 3581630686946985340, guid: 4b2cb68e4fc46ce4cbd8e32007016344, type: 3}
+  - {fileID: 9124490495266242307, guid: e46e64938faf1c34b9d7b58b80f95382, type: 3}
   - {fileID: 2853778281854439276, guid: b24ee9f7bff697c4b9b9c7187bf33183, type: 3}
   - {fileID: 6931668711587959220, guid: 54522a48740c3444983e7cd1dac75359, type: 3}
   - {fileID: 8180385347942315478, guid: 117261afc0c9126479fff9bd0e97a1da, type: 3}

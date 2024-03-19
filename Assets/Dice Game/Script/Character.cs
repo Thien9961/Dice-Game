@@ -1,23 +1,20 @@
 using DG.Tweening;
 using Spine.Unity;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(SkeletonGraphic))]
 public class Character : Singleton<Character>,IDiceListener
 {
     public float travelTime=0.5f;
-    SkeletonGraphic animator;
+    public SkeletonGraphic animator { get; set; }
     public int location,direction;
     public Vector3 offset;
     public ICharacterStatus status;
     public Transform walkablePath { get;set; }
     public Vector3[] path { get;set; }
     AudioSource speaker;
-    public static readonly string RUNNING = "run",IDLING="idling";
+    public static readonly string RUNNING = "run",IDLING="idling",STUNNED="stun";
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +62,27 @@ public class Character : Singleton<Character>,IDiceListener
     // Update is called once per frame
     void Update()
     {
-        
+
+        if(DOTween.IsTweening(transform)) 
+        {
+            Debug.Log("Tweening");
+            bool a = false,b = false;
+            if (typeof(Dizzy) != status.GetType())
+            {
+                 a = transform.position.x <= walkablePath.GetChild(10).position.x + offset.x;
+                 b = transform.position.y > walkablePath.GetChild(10).position.y + offset.y+100;
+                Debug.Log("a");
+            }
+            else
+            {
+                Debug.Log("b");
+                b = transform.position.x <= walkablePath.GetChild(10).position.x + offset.x;
+                 a = transform.position.y > walkablePath.GetChild(10).position.y + offset.y+100;
+            }
+            if (a && b)
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            else if(!b)
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
     }
 }

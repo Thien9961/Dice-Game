@@ -75,8 +75,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279849080
+  m_fontColor: {r: 0.47058827, g: 0.3137255, b: 0.098039225, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -378,21 +378,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8585663700495934791, guid: cc27a8b306355874f95a93838fc2f78c, type: 3}
   m_PrefabInstance: {fileID: 5882372392342084502}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3545596175989329662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2775348921589563089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fd8616e71493ed49912c273a6324836, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 2775348922434174273}
-  levelTxt: {fileID: 130497256414016264}
-  valueTxt: {fileID: 5574504731705214267}
 --- !u!82 &825535799535159465
 AudioSource:
   m_ObjectHideFlags: 0
@@ -404,7 +389,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8b8b29ce09c974085b731e91a026a987, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -489,6 +474,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3545596175989329662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2775348921589563089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd8616e71493ed49912c273a6324836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 2775348922434174273}
+  levelTxt: {fileID: 130497256414016264}
+  valueTxt: {fileID: 5574504731705214267}
 --- !u!224 &2775348922434174273 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8585663700871866071, guid: cc27a8b306355874f95a93838fc2f78c, type: 3}

@@ -1196,7 +1196,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 7303572202934351318}
   toggleTransition: 1
   graphic: {fileID: 7303572201397279882}
@@ -1321,7 +1321,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 7303572201249390569}
   m_OnClick:
     m_PersistentCalls:
@@ -1937,7 +1937,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 7303572201618308183}
   m_OnClick:
     m_PersistentCalls:
@@ -2950,7 +2950,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 7303572202179128784}
   m_OnClick:
     m_PersistentCalls:
@@ -4271,6 +4271,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 7571655826863629312}
+    - target: {fileID: 5691267053570538380, guid: ccbd410bd883c224c83b77baaddb22f2, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279849080
+      objectReference: {fileID: 0}
     - target: {fileID: 7615844842846238292, guid: ccbd410bd883c224c83b77baaddb22f2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4572,6 +4576,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8662333411219437419, guid: 1dbe39ff72b08784db5298f3ff166f32, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279849080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dbe39ff72b08784db5298f3ff166f32, type: 3}
 --- !u!224 &6477255672278792843 stripped
@@ -4795,6 +4803,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7303572201402194617}
     m_Modifications:
+    - target: {fileID: 1308543417615461666, guid: 9c90c4a74afb0904d9453ef102d4337a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279849080
+      objectReference: {fileID: 0}
     - target: {fileID: 3847053737499992314, guid: 9c90c4a74afb0904d9453ef102d4337a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5414,6 +5426,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 4732418581117613252}
+    - target: {fileID: 8771525632400939094, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279849080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8982e092384fe14e91bad3e051149b0, type: 3}
 --- !u!224 &4732418581117613252 stripped
@@ -5626,6 +5642,10 @@ PrefabInstance:
     - target: {fileID: 5119743647855220847, guid: bb67014cc208f7146bd8ad51f788ed83, type: 3}
       propertyPath: m_Name
       value: Book Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937619352100967862, guid: bb67014cc208f7146bd8ad51f788ed83, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279849080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb67014cc208f7146bd8ad51f788ed83, type: 3}
@@ -5882,6 +5902,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7303572201402194617}
     m_Modifications:
+    - target: {fileID: 1308543417615461666, guid: 9c90c4a74afb0904d9453ef102d4337a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279849080
+      objectReference: {fileID: 0}
     - target: {fileID: 3847053737499992314, guid: 9c90c4a74afb0904d9453ef102d4337a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6197,6 +6221,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7303572201402194617}
     m_Modifications:
+    - target: {fileID: 2009970548543232041, guid: 78d885cbf2692dc449b52f5761a1892a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279849080
+      objectReference: {fileID: 0}
     - target: {fileID: 4372786483326162416, guid: 78d885cbf2692dc449b52f5761a1892a, type: 3}
       propertyPath: m_Name
       value: Dummy Variant
@@ -6706,6 +6734,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8693163830428519547, guid: 85ec8d84693781f42a531f537bd3b2f2, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279849080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ec8d84693781f42a531f537bd3b2f2, type: 3}
 --- !u!224 &4445858097235014554 stripped
@@ -7017,6 +7049,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4313155100537595339, guid: d1102c4804cddeb4699b53e9da6c3d63, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279849080
+      objectReference: {fileID: 0}
     - target: {fileID: 5747817095401165254, guid: d1102c4804cddeb4699b53e9da6c3d63, type: 3}
       propertyPath: item
       value: 
@@ -7127,6 +7163,10 @@ PrefabInstance:
     - target: {fileID: 131228103128622517, guid: 98108f28552a4e0448b8eebe6defb2c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781444392813340781, guid: 98108f28552a4e0448b8eebe6defb2c5, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279849080
       objectReference: {fileID: 0}
     - target: {fileID: 5946601400302361696, guid: 98108f28552a4e0448b8eebe6defb2c5, type: 3}
       propertyPath: item
@@ -7442,6 +7482,10 @@ PrefabInstance:
     - target: {fileID: 131228103128622517, guid: 98108f28552a4e0448b8eebe6defb2c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2781444392813340781, guid: 98108f28552a4e0448b8eebe6defb2c5, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279849080
       objectReference: {fileID: 0}
     - target: {fileID: 5946601400302361696, guid: 98108f28552a4e0448b8eebe6defb2c5, type: 3}
       propertyPath: item

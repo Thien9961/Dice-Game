@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: Dice_lvlup_slot_Atlas
   m_EditorClassIdentifier: 
-  textureLoadingMode: 0
-  onDemandTextureLoader: {fileID: 0}
   atlasFile: {fileID: 4900000, guid: 4b5384739dc9f4058aa9fb0571b4f4bd, type: 3}
   materials:
   - {fileID: 2100000, guid: 82b80dc5964ac46ea88a79b3bbc62d8a, type: 2}
