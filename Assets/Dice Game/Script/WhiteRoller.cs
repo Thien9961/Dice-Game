@@ -23,7 +23,7 @@ public class WhiteRoller : Singleton<WhiteRoller>,IRoller,IDiceListener,IContain
     {
         gameObject.SetActive(false);
     }
-    public void WaitForPublish(Dice dice)
+    public void WaitForPublish(Dice dice, int r)
     {
 
     }

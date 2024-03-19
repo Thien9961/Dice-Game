@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5730364025777105350}
   - component: {fileID: 8065177231823819225}
+  - component: {fileID: 8229514060441735775}
   m_Layer: 5
   m_Name: White Dice
   m_TagString: Untagged
@@ -58,3 +59,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6b23379ccd2827a4cb807dea1dc8bafa, type: 2}
   - {fileID: 11400000, guid: 5d84f6bf2df0d0b428731e7db5f3a0df, type: 2}
   - {fileID: 11400000, guid: f8cb6610a48a316489884abd0340cf4b, type: 2}
+  rollingDice: {fileID: 2957806696146951074, guid: e64efa5aa9daf1541a34bd77355d5f33, type: 3}
+--- !u!222 &8229514060441735775
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3752816758494554531}
+  m_CullTransparentMesh: 1

@@ -48,7 +48,7 @@ public class Character : Singleton<Character>,IDiceListener
     {
         
     }
-    public void WaitForPublish(Dice dice)
+    public void WaitForPublish(Dice dice, int r)
     {
 
     }

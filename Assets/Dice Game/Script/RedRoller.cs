@@ -22,7 +22,7 @@ public class RedRoller : Singleton<RedRoller>, IRoller,IDiceListener,IContainer
     {
         gameObject.SetActive(false);
     }
-    public void WaitForPublish(Dice dice)
+    public void WaitForPublish(Dice dice, int r)
     {
 
     }

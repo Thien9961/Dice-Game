@@ -273,6 +273,7 @@ MonoBehaviour:
   showTime: 2
   sides:
   - {fileID: 11400000, guid: 88aa9c90ba28e7f4bbbfce3fe2eec96f, type: 2}
+  rollingDice: {fileID: 2957806696146951074, guid: e64efa5aa9daf1541a34bd77355d5f33, type: 3}
 --- !u!1 &2358331270225277317
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +412,7 @@ MonoBehaviour:
   showTime: 2
   sides:
   - {fileID: 11400000, guid: f8cb6610a48a316489884abd0340cf4b, type: 2}
+  rollingDice: {fileID: 2957806696146951074, guid: e64efa5aa9daf1541a34bd77355d5f33, type: 3}
 --- !u!1 &2397924908255376922
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +551,7 @@ MonoBehaviour:
   showTime: 2
   sides:
   - {fileID: 11400000, guid: bfa4a1574b8301940ab9bf98f1261a96, type: 2}
+  rollingDice: {fileID: 2957806696146951074, guid: e64efa5aa9daf1541a34bd77355d5f33, type: 3}
 --- !u!1 &3945014352191024204
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +812,7 @@ MonoBehaviour:
   showTime: 2
   sides:
   - {fileID: 11400000, guid: 5d84f6bf2df0d0b428731e7db5f3a0df, type: 2}
+  rollingDice: {fileID: 2957806696146951074, guid: e64efa5aa9daf1541a34bd77355d5f33, type: 3}
 --- !u!1 &8068080895892847095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1081,7 @@ MonoBehaviour:
   showTime: 2
   sides:
   - {fileID: 11400000, guid: 6b23379ccd2827a4cb807dea1dc8bafa, type: 2}
+  rollingDice: {fileID: 2957806696146951074, guid: e64efa5aa9daf1541a34bd77355d5f33, type: 3}
 --- !u!1 &8778838554367779798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1220,7 @@ MonoBehaviour:
   showTime: 2
   sides:
   - {fileID: 11400000, guid: a81f013ac0f14034ea7a0bc84c7583e6, type: 2}
+  rollingDice: {fileID: 2957806696146951074, guid: e64efa5aa9daf1541a34bd77355d5f33, type: 3}
 --- !u!1001 &5931679008264889533
 PrefabInstance:
   m_ObjectHideFlags: 0
