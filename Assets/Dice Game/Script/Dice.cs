@@ -18,6 +18,15 @@ public class Dice : MonoBehaviour,IDice
     // Start is called before the first frame update
     public virtual void Roll()
     {
+        listener.Clear();
+        if (!listener.Contains(WhiteRoller.instance))
+            listener.Add(WhiteRoller.instance);
+        if (!listener.Contains(RedRoller.instance))
+            listener.Add(RedRoller.instance);
+        if (!listener.Contains(UIManager.instance))
+            listener.Add(UIManager.instance);
+        if (!listener.Contains(Character.instance))
+            listener.Add(Character.instance);
         listener.Add(Instantiate(rollingDice, UIManager.instance.transform));
         Extension.WaitForSeconds(this, rollTime, Stop);
         listener.ForEach(x=>x.WaitForResult(this));
@@ -37,13 +46,6 @@ public class Dice : MonoBehaviour,IDice
     }
     protected virtual void Awake()
     {
-        if (!listener.Contains(WhiteRoller.instance))
-            listener.Add(WhiteRoller.instance);
-        if(!listener.Contains(RedRoller.instance))
-            listener.Add(RedRoller.instance);
-        if(!listener.Contains(UIManager.instance))
-            listener.Add(UIManager.instance);
-        if(!listener.Contains(Character.instance))
-            listener.Add(Character.instance);
+
     }
 }

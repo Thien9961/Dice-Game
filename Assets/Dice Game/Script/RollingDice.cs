@@ -8,10 +8,10 @@ using UnityEngine.UI;
 [RequireComponent (typeof(AudioSource))]
 public class RollingDice : MonoBehaviour,IDiceListener
 {
-    public  SkeletonGraphic animator {  get; set; }
+    public SkeletonGraphic animator;
     public Sprite[] sides;
     public Image result,shadow;
-    AudioSource speaker;
+    public AudioSource speaker;
     public DiceType type;
     static readonly string[] ANIMATION_NAME= { "GreenRoll", "RedRoll" };
     Image dice;
