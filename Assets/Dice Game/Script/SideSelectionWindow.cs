@@ -19,7 +19,7 @@ public class SideSelectionWindow : MonoBehaviour
 
     public void Exit()
     {
-        Instantiate(_dice, UIManager.instance.transform).Roll(); 
+        Instantiate(_dice, UIManager.instance.transform).Roll();
         DestroyImmediate(gameObject);
     }
     // Start is called before the first frame update

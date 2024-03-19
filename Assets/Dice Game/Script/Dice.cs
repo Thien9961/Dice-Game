@@ -13,12 +13,12 @@ public class Dice : MonoBehaviour,IDice
     public static List<IDiceListener> listener = new();
     public RollingDice rollingDice;
 
-    int result;
+    protected int result;
 
     // Start is called before the first frame update
     public virtual void Roll()
     {
-        Instantiate(rollingDice, UIManager.instance.transform);
+        listener.Add(Instantiate(rollingDice, UIManager.instance.transform));
         Extension.WaitForSeconds(this, rollTime, Stop);
         listener.ForEach(x=>x.WaitForResult(this));
     }

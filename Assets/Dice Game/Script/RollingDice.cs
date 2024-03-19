@@ -13,7 +13,8 @@ public class RollingDice : MonoBehaviour,IDiceListener
     public Image result,shadow;
     public AudioClip clip;
     public DiceType type;
-    static readonly string[] ANIMATION_NAME= { "Greenroll", "RedRoll" };
+    static readonly string[] ANIMATION_NAME= { "GreenRoll", "RedRoll" };
+    Image dice;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -25,13 +26,15 @@ public class RollingDice : MonoBehaviour,IDiceListener
     }
     public void WaitForPublish(Dice dice, int result)
     {
-        var s = Instantiate(shadow, transform);
-        var v = Instantiate(this.result,transform);
-        v.sprite = sides[result];
+        this.dice = Instantiate(this.result, Instantiate(shadow, transform).transform);
+        this.dice.sprite = sides[result];
+        animator.enabled = false;
     }
+
+
     public void ReceiveResult(Dice dice, int result)
     {
-        Destroy(this);
+        DestroyImmediate(gameObject);
     }
 }
 

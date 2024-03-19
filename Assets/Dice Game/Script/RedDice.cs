@@ -8,14 +8,17 @@ public class RedDice : Dice
 {
     public override void Roll()
     {
+        listener.Add(Instantiate(rollingDice, UIManager.instance.transform));
         GetComponent<Button>().enabled = false;
+        GetComponent<Image>().enabled = false;
         Extension.WaitForSeconds(this, rollTime, Stop);
         listener.ForEach(x => x.WaitForResult(this));
     }
 
-    public override void PublishResult()
+    public override void Stop()
     {
-        listener.ForEach(x => x.ReceiveResult(this, 0));
-        DestroyImmediate(gameObject);
+        result = Random.Range(0, sides.Length);
+        listener.ForEach(x => x.WaitForPublish(this, sides[result].value-1));
+        Extension.WaitForSeconds(this, showTime, PublishResult);
     }
 }
