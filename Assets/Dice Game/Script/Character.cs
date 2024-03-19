@@ -1,30 +1,32 @@
 using DG.Tweening;
+using Spine.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SkeletonGraphic))]
 public class Character : Singleton<Character>,IDiceListener
 {
     public float travelTime=0.5f;
-    Animator animator;
+    SkeletonGraphic animator;
     public int location,direction;
     public Vector3 offset;
     public ICharacterStatus status;
     public Transform walkablePath { get;set; }
     public Vector3[] path { get;set; }
+    public static readonly string RUNNING = "run",IDLING="idling";
     // Start is called before the first frame update
     void Start()
     {
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<SkeletonGraphic>();
         transform.position = walkablePath.GetChild(location).position+offset;
         status = new Normal(this);
     }
 
-
     public void Move(int step,bool invert)
     {
+        animator.AnimationState.SetAnimation(0, RUNNING, true);
         float f = step * travelTime;int i = 0;
         path=new Vector3[step];
         while (step != 0)
@@ -37,6 +39,7 @@ public class Character : Singleton<Character>,IDiceListener
 
     public void Stop()
     {
+        animator.AnimationState.SetAnimation(0, IDLING, true);
         status = new Normal(this);
         if (UIManager.instance.playableArea[location].TryGetComponent(out ICell cell))
             cell.Trigger();

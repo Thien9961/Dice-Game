@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class EventTimer : MonoBehaviour
 {
-    public float eventDuration=360000;
+    public long eventDuration=360000;
     float currentTime;
     string formattedTime;
 

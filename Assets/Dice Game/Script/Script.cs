@@ -103,7 +103,10 @@ public class Normal : ICharacterStatus
             character.location = 0;
             UIManager.instance.laps++;
         }
-            
+        if (character.location >= 10)
+            character.transform.rotation = Quaternion.Euler(0, 180, 0);
+        else if (character.location >= 0)
+            character.transform.rotation = Quaternion.Euler(0, 0, 0);
         character.path[i] = character.walkablePath.GetChild(character.location).position + character.offset;
         step--;i++;
     }
@@ -126,6 +129,10 @@ public class Dizzy : ICharacterStatus
             character.location = UIManager.instance.playableArea.Length-1;
             UIManager.instance.laps--;
         }
+        if (character.location >= 10)
+            character.transform.rotation = Quaternion.Euler(0,0, 0);
+        else if (character.location >= 0)
+            character.transform.rotation = Quaternion.Euler(0, 180, 0);
         character.path[i] = character.walkablePath.GetChild(character.location).position + character.offset;
         step--;i++;
     }
@@ -152,6 +159,10 @@ public class Double : ICharacterStatus
             character.location++;
         else
             character.location = 0;
+        if (character.location >= 10)
+            character.transform.rotation = Quaternion.Euler(0, 180, 0);
+        else if (character.location >= 0)
+            character.transform.rotation = Quaternion.Euler(0, 0, 0);
         character.path[i] = character.walkablePath.GetChild(character.location).position + character.offset;
         step--;i++;
     }
