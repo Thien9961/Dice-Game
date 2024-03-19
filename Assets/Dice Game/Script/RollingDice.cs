@@ -8,24 +8,28 @@ using UnityEngine.UI;
 [RequireComponent (typeof(AudioSource))]
 public class RollingDice : MonoBehaviour,IDiceListener
 {
-    SkeletonGraphic animator;
+    public  SkeletonGraphic animator {  get; set; }
     public Sprite[] sides;
     public Image result,shadow;
-    public AudioClip clip;
+    AudioSource speaker;
     public DiceType type;
     static readonly string[] ANIMATION_NAME= { "GreenRoll", "RedRoll" };
     Image dice;
     // Start is called before the first frame update
     private void Awake()
     {
+        speaker = GetComponent<AudioSource>();
+        speaker.loop = true;
         animator = GetComponent<SkeletonGraphic>();
     }
     public void WaitForResult(Dice dice)
     {
+        speaker.Play();
         animator.AnimationState.SetAnimation(0, ANIMATION_NAME[(int)type],true);
     }
     public void WaitForPublish(Dice dice, int result)
     {
+        speaker.Stop();
         this.dice = Instantiate(this.result, Instantiate(shadow, transform).transform);
         this.dice.sprite = sides[result];
         animator.enabled = false;

@@ -4,12 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-
+[RequireComponent(typeof(AudioSource))]
 public class ResourceCell : Cell
 {
     public delegate void AddResource(ResourceCell cell,float value);
     public event AddResource onTrigger;
     public List<IContainer> storage=new();
+    AudioSource speaker;
     public float value { get {
             string value=string.Empty;
             foreach (char character in valueTxt.text)
@@ -37,6 +38,7 @@ public class ResourceCell : Cell
     }
     public override void Trigger()
     {
+        speaker.Play();
         onTrigger.Invoke(this, value * level);
         if(level<3)
             level++;
@@ -44,6 +46,7 @@ public class ResourceCell : Cell
 
     protected virtual void Start()
     {
+        speaker=GetComponent<AudioSource>();
         storage.Add(UIManager.instance);
         foreach (IContainer container in storage)
             onTrigger += container.Add;

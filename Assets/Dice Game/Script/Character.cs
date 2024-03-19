@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(SkeletonGraphic))]
 public class Character : Singleton<Character>,IDiceListener
 {
@@ -15,10 +16,12 @@ public class Character : Singleton<Character>,IDiceListener
     public ICharacterStatus status;
     public Transform walkablePath { get;set; }
     public Vector3[] path { get;set; }
+    AudioSource speaker;
     public static readonly string RUNNING = "run",IDLING="idling";
     // Start is called before the first frame update
     void Start()
     {
+        speaker = GetComponent<AudioSource>();speaker.loop=true;
         animator = GetComponent<SkeletonGraphic>();
         transform.position = walkablePath.GetChild(location).position+offset;
         status = new Normal(this);
@@ -26,6 +29,7 @@ public class Character : Singleton<Character>,IDiceListener
 
     public void Move(int step,bool invert)
     {
+        speaker.Play();
         animator.AnimationState.SetAnimation(0, RUNNING, true);
         float f = step * travelTime;int i = 0;
         path=new Vector3[step];
@@ -39,6 +43,7 @@ public class Character : Singleton<Character>,IDiceListener
 
     public void Stop()
     {
+        speaker.Stop();
         animator.AnimationState.SetAnimation(0, IDLING, true);
         status = new Normal(this);
         if (UIManager.instance.playableArea[location].TryGetComponent(out ICell cell))
